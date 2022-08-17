@@ -1,0 +1,12 @@
+﻿@model Dept
+<h2>
+	Detail of @Model.Name
+</h2>
+<p>
+	@Html.DisplayNameFor(d=>d.Id) : @Html.DisplayFor(d=>d.Id)
+</p>
+<p>
+	@Html.DisplayNameFor(d=>d.Location) : @Html.DisplayFor(d=>d.Location)
+</p>
+<hr />
+@Html.ActionLink("Back to the List", "List")

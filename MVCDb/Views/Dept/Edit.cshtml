@@ -1,0 +1,71 @@
+﻿@model Dept
+
+<h2>Editing Department Record</h2>
+<hr />
+
+<form method="post">
+    <table>
+        <tr>
+            <td><input type="text" readonly asp-for="Id"/></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Name"></label></td>
+            <td>
+                <input type="text" asp-for="Name"/>
+                <span asp-validation-for="Name" style="color:red"></span>
+            </td>
+        </tr>
+        <tr>
+            <td><label asp-for="Location"></label></td>
+            <td>
+                <input type="text" asp-for="Location"/>
+                <span asp-validation-for="Location" style="color:red"></span>
+            </td>
+        </tr>
+    </table>
+    <br /> <br />
+    <input type="submit" value="Update" />
+</form>
+
+@Html.ActionLink("Back to List", "List")
+
+<script src="~/jquery/jquery.min.js"></script>
+<script src="~/jquery-validate/jquery.validate.min.js"></script>
+<script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+@*@model Dept
+<h2>Editing Record</h2>
+<form method="post">
+	<table>
+		<tr>
+			<td>
+				<input type="text" readonly asp-for="Id" />
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label asp-for="Name"></label>
+			</td>
+			<td>
+				<input type = "text" asp-for = "Name"  />
+				<span asp-validation-for="Name" style="color:red"/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label asp-for="Location"></label>
+			</td>
+			<td>
+				<input type = "text" asp-for = "Location"  />
+				<span asp-validation-for="Location" style="color:red"/>
+			</td>
+		</tr>
+	</table>
+	<br /><br />
+	<input type="submit" value="Update" />
+</form>
+@Html.ActionLink("Back to List", "List")
+
+<script src="~/jquery/jquery.min.js"></script>
+<script src="~/jquery-validate/jquery.validate.min.js"></script>
+<script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>*@

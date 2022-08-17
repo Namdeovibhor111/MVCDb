@@ -1,0 +1,30 @@
+﻿@model Dept
+<h2>Adding Department Record</h2>
+<hr />
+@using(Html.BeginForm()){
+	<div>
+		@Html.LabelFor(d => d.Id)
+		@Html.EditorFor(d => d.Id)
+		@Html.ValidationMessageFor(d => d.Id, "", new {@style = "color:red"})
+	</div>
+	<div>
+		@Html.LabelFor(d => d.Name)
+		@Html.EditorFor(d => d.Name)
+		@Html.ValidationMessageFor(d => d.Name, "", new {@style = "color:red"})
+	</div>
+	<div>
+		@Html.LabelFor(d => d.Location)
+		@Html.EditorFor(d => d.Location)
+		@Html.ValidationMessageFor(d => d.Location, "", new {@style = "color:red"})
+	</div>
+	<br />
+	<br />
+	<input type="submit" value="Save" />
+}
+<br />
+<br />
+@Html.ActionLink("Back to List", "List")
+
+<script src="~/jquery/jquery.min.js"></script>
+<script src="~/jquery-validate/jquery.validate.min.js"></script>
+<script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
