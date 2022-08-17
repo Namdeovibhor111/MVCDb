@@ -1,0 +1,32 @@
+﻿@model Dept
+
+<h2>Deleting Record of @Model.Name</h2>
+
+<p>
+    <label asp-for="Id"></label> : <input type="text" asp-for="Id" readonly />
+</p>
+<p>
+    <label asp-for="Name"></label> : <input type="text" asp-for="Name" readonly />
+</p>
+<p>
+    <label asp-for="Location"></label> : <input type="text" asp-for="Location" readonly />
+</p>
+
+<form method="post">
+    <input type="submit" value="Are you sure?" style="background-color:red;height:100px;font-size:xx-large"/>
+</form>
+
+@Html.ActionLink("Back to List", "List")
+
+@*@model Dept
+<h2>Deleting Record of @Model.Name</h2>
+<p>
+	<label asp-for="Id"></label>:<input type="text" asp-for="Id" readonly/>
+</p>
+<p>
+	<label asp-for="Location"></label>:<input type="text" asp-for="Location" readonly/>
+</p>
+<form method="post">
+	<input type="submit" value="Are you sure ?" style="background-color:red;height:100px;font-size:xx-large"/>
+</form>
+@Html.ActionLink("Back to List", "List")*@

@@ -56,5 +56,17 @@ namespace MVCDb.Controllers
             }
             return View(dept);
         }
+        [HttpGet]
+        public IActionResult Deleted(int id)
+        {
+            var data = repos.FindDept(id);
+            return View(data);
+        }
+        [HttpPost]
+        public IActionResult Deleted(Dept dept)
+        {
+            repos.DeleteDept(dept.Id);
+            return RedirectToAction("List");
+        }
     }
 }

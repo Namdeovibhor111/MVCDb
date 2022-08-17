@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/MainStyles.css" rel="stylesheet"/>
+</head>
+<body>
+    <h1>Mircosoft Inc</h1>
+    <hr />
+    <nav style="background-color:greenyellow;text-align:center"></nav>
+    <a asp-controller="Dept" asp-action="List">Department</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a asp-controller="Emp" asp-action="List">Employee</a>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

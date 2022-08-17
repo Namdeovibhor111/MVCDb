@@ -23,5 +23,6 @@ namespace MVCDb.Models
         public string Location { get; set; }
 
         public virtual ICollection<Emp> Emps { get; set; }
+        
     }
 }

@@ -1,0 +1,25 @@
+﻿body {
+    margin: 40px;
+    background-color: lightgoldenrodyellow;
+    height: 800px;
+    border: 5px solid gray;
+}
+
+h1 {
+    background-color: darksalmon;
+    color: black;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+}
+
+tr:hover {
+    color: gold;
+    background-color: darkturquoise;
+}
+
+th {
+    font-weight: bolder;
+}
