@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MVCDb.Models;
+using MVCDb.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -64,6 +65,31 @@ namespace MVCDb.Controllers
         {
             bool yesno = db.Emps.Any(x => x.Email == Email);
             return Json(!yesno);
+        }
+        public IActionResult ShowBonus()
+        {
+            List<Emp> emps = db.Emps.Include("Dept").ToList();
+            List<EmpDept> empDepts = new List<EmpDept>();
+            
+            foreach(var data in emps)
+            {
+                EmpDept ed = new EmpDept();
+                ed.Id = data.Id;
+                ed.Name = data.Name;
+                ed.DeptName = data.Dept.Name;
+                ed.Location = data.Dept.Location;
+                ed.Salary = data.Salary;
+                if (data.Salary > 70000) ed.Bonus = 7000;
+                else if (data.Salary > 40000) ed.Bonus = 4000;
+                else  ed.Bonus = 2000;
+                empDepts.Add(ed);
+            }
+            return View(empDepts);
+        }
+        public IActionResult Display(int id)
+        {
+            var empdata = db.Emps.Include("Dept").Where(e=>e.Id==id).FirstOrDefault();
+            return View(empdata);
         }
     }
 }

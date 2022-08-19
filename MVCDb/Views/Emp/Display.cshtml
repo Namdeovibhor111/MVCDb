@@ -1,0 +1,24 @@
+﻿@model Emp
+<h2>
+	Details of Employee
+</h2>
+<p>
+	@Html.DisplayNameFor(e=>e.Id) : @Html.DisplayFor(e=>e.Id)
+</p>
+<p>
+	@Html.DisplayNameFor(e=>e.Name) : @Html.DisplayFor(e=>e.Name)
+</p>
+<p>
+	@Html.DisplayNameFor(e=>e.Dept.Name) : @Html.DisplayFor(e=>e.Dept.Name)
+</p>
+<p>
+	@Html.DisplayNameFor(e=>e.Salary) : @Html.DisplayFor(e=>e.Salary)
+</p>
+<p>
+	@Html.DisplayNameFor(e=>e.Dob) : @Html.DisplayFor(e=>e.Dob)
+</p>
+<p>
+	@Html.DisplayNameFor(e=>e.Email) : @Html.DisplayFor(e=>e.Email)
+</p>
+<hr/>
+@Html.ActionLink("Back to list", "list")
