@@ -1,0 +1,61 @@
+﻿@model Emp
+<h2>Adding Employee</h2>
+<hr />
+<form method="post">
+	<table >
+		<tr>
+			<td>
+				<label asp-for="Name"></label>
+			</td>
+			<td>
+				<input type="text" asp-for="Name"/>
+				<span asp-validation-for="Name" style="color:red"></span>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label asp-for="Salary"></label>
+			</td>
+			<td>
+				<input type="text" asp-for="Salary"/>
+				<span asp-validation-for="Salary" style="color:red"></span>
+			</td>
+			<td></td>
+			<td>
+				<label asp-for="Dob"></label>
+				<input type="date" asp-for="Dob"/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>Select Department</label>
+				<select asp-for="Deptid" asp-items="ViewBag.Deptid">
+					<option value="">Choose Department</option>
+				</select>
+			</td>
+			<td></td>
+			<td>
+				<label asp-for="Email"></label>
+				<input type="email" asp-for="Email"/>
+				<span asp-validation-for="Email" style="color:red"></span>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="submit" value="Save" style="background-color:limegreen"/>
+			</td>
+		</tr>
+	</table>
+</form>
+<br />
+<br />
+<br />
+<br />
+<div asp-validation-summary="All" style="color:red"></div>
+<br />
+<br />
+@Html.ActionLink("Back to List", "List")
+
+<script src="~/jquery/jquery.min.js"></script>
+<script src="~/jquery-validate/jquery.validate.min.js"></script>
+<script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>

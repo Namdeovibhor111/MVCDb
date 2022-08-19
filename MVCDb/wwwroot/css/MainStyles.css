@@ -1,8 +1,11 @@
 ﻿body {
     margin: 40px;
-    background-color: lightgoldenrodyellow;
+    background-color: palegoldenrod;
     height: 800px;
     border: 5px solid gray;
+}
+a{
+    align-content:center;
 }
 
 h1 {
